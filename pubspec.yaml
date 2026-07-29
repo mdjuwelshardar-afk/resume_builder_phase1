@@ -1,0 +1,67 @@
+name: resume_builder
+description: "বাংলা + ইংরেজি সাপোর্ট সহ মাল্টি-মডিউল রেজুমে/ডকুমেন্ট বিল্ডার (Resume, Cover Letter, Biodata, Portfolio ইত্যাদি)"
+publish_to: 'none'
+version: 0.1.0+1
+
+environment:
+  sdk: '>=3.4.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # State management
+  flutter_riverpod: ^2.5.1
+  riverpod_annotation: ^2.3.5
+
+  # Local database
+  isar: ^3.1.0+1
+  isar_flutter_libs: ^3.1.0+1
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  path_provider: ^2.1.4
+
+  # Immutable models (canvas objects, entities)
+  freezed_annotation: ^2.4.4
+  json_annotation: ^4.9.0
+
+  # Routing
+  go_router: ^14.2.0
+
+  # PDF export
+  pdf: ^3.11.1
+  printing: ^5.13.2
+
+  # Unique IDs for canvas objects
+  uuid: ^4.4.2
+
+  # Icons
+  cupertino_icons: ^1.0.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+  # Code generation
+  build_runner: ^2.4.11
+  riverpod_generator: ^2.4.3
+  freezed: ^2.5.7
+  json_serializable: ^6.8.0
+  isar_generator: ^3.1.0+1
+
+flutter:
+  uses-material-design: true
+
+  fonts:
+    # বাংলা ফন্ট — আসল .ttf ফাইল assets/fonts/ এ যোগ করার পর uncomment করবে।
+    # লাইসেন্স ফ্রি-ডিস্ট্রিবিউটেবল ফন্ট (যেমন Noto Sans Bengali, SolaimanLipi, Kalpurush)
+    # আগে যোগ করা ভালো — SutonnyMJ এর মতো লাইসেন্সড ফন্ট শুধু ইউজার নিজে ইম্পোর্ট করলে।
+    # - family: NotoSansBengali
+    #   fonts:
+    #     - asset: assets/fonts/NotoSansBengali-Regular.ttf
+    #     - asset: assets/fonts/NotoSansBengali-Bold.ttf
+    #       weight: 700
+
+  assets:
+    - assets/fonts/
